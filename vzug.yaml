@@ -1,0 +1,29 @@
+sensor:
+  - platform: rest
+    name: vzug_dishwasher
+    resource: http://192.168.1.176/ai?command=getDeviceStatus
+    value_template: "{{ value_json.result }}" 
+    json_attributes:
+        - "DeviceName"
+        - "Serial"
+        - "Inactive"
+        - "Program"
+        - "Status"
+        - "ProgramEnd"
+        - "End"
+        - "EndType"
+        - "deviceUuid"
+  - platform: rest
+    name: vzug_oven
+    resource: http://192.168.1.175/ai?command=getDeviceStatus
+    value_template: "{{ value_json.result }}" 
+    json_attributes:
+        - "DeviceName"
+        - "Serial"
+        - "Inactive"
+        - "Program"
+        - "Status"
+        - "ProgramEnd"
+        - "End"
+        - "EndType"
+        - "deviceUuid"
