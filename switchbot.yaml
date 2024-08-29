@@ -1,0 +1,24 @@
+rest_command:
+  switchbot_device_command:
+    url: "https://api.switch-bot.com/v1.0/devices/{{ deviceId }}/commands"
+    method: post
+    content_type: "application/json"
+    headers:
+      Authorization: !secret switchbot_api
+    payload: '{"command": "{{ command }}"}'
+
+switch:
+  - platform: template
+    switches:
+      button_computer:
+        friendly_name: Computer
+        turn_on:
+          service: rest_command.switchbot_device_command
+          data:
+            deviceId: !secret switchbot_deviceId
+            command: "turnOn"
+        turn_off:
+          service: rest_command.switchbot_device_command
+          data:
+            deviceId: !secret switchbot_deviceId
+            command: "turnOff"
