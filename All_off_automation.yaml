@@ -1,0 +1,65 @@
+###First Automation
+alias: Alles_Aus_Schelly
+description: ""
+trigger:
+  - platform: numeric_state
+    entity_id: counter.doppelklick
+    above: 1.5
+condition: []
+action:
+  - data:
+      skip_condition: true
+    target:
+      entity_id:
+        - automation.alles_aus
+    action: automation.trigger
+mode: single
+
+
+###Second Automation
+alias: Eingang_zähler
+description: ""
+trigger:
+  - platform: device
+    type: turned_off
+    device_id: 0a822b9fec9b299a3df24775f34ef5c7
+    entity_id: 5bfad8c58a9883605b5756c135c72ff2
+    domain: switch
+condition: []
+action:
+  - data: {}
+    target:
+      entity_id: counter.doppelklick
+    action: counter.increment
+mode: single
+
+###Third Automation
+alias: Eingang_zähler_delete
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - counter.doppelklick
+    to: "2"
+  - platform: numeric_state
+    entity_id: counter.doppelklick
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 10
+    above: 0.9
+condition:
+  - condition: numeric_state
+    entity_id: counter.doppelklick
+    above: 0.9
+action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - data: {}
+    target:
+      entity_id: counter.doppelklick
+    action: counter.reset
+mode: single
