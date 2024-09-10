@@ -1,6 +1,8 @@
 sensor:
   - platform: rest
     name: vzug_dishwasher
+    unique_id: "vzug_dishwasher_176"
+    icon: mdi:dishwasher
     resource: http://192.168.1.176/ai?command=getDeviceStatus
     value_template: "{{ value_json.result }}" 
     json_attributes:
@@ -15,6 +17,8 @@ sensor:
         - "deviceUuid"
   - platform: rest
     name: vzug_oven
+    unique_id: "vzug_oven_175"
+    icon: mdi:stove
     resource: http://192.168.1.175/ai?command=getDeviceStatus
     value_template: "{{ value_json.result }}" 
     json_attributes:
