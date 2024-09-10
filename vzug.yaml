@@ -27,3 +27,96 @@ sensor:
         - "End"
         - "EndType"
         - "deviceUuid"
+
+# Template-Sensoren für die Attribute des vzug_dishwasher-Sensors
+  - platform: template
+    sensors:
+      vzug_dishwasher_device_name:
+        unique_id: "vzug_dishwasher_device_name"
+        friendly_name: "V-ZUG Dishwasher Device Name"
+        value_template: "{{ state_attr('sensor.vzug_dishwasher', 'DeviceName') }}"
+      
+      vzug_dishwasher_serial:
+        unique_id: "vzug_dishwasher_serial"
+        friendly_name: "V-ZUG Dishwasher Serial"
+        value_template: "{{ state_attr('sensor.vzug_dishwasher', 'Serial') }}"
+      
+      vzug_dishwasher_inactive:
+        unique_id: "vzug_dishwasher_inactive"
+        friendly_name: "V-ZUG Dishwasher Inactive"
+        value_template: "{{ state_attr('sensor.vzug_dishwasher', 'Inactive') }}"
+      
+      vzug_dishwasher_program:
+        unique_id: "vzug_dishwasher_program"
+        friendly_name: "V-ZUG Dishwasher Program"
+        value_template: "{{ state_attr('sensor.vzug_dishwasher', 'Program') }}"
+      
+      vzug_dishwasher_status:
+        unique_id: "vzug_dishwasher_status"
+        friendly_name: "V-ZUG Dishwasher Status"
+        value_template: "{{ state_attr('sensor.vzug_dishwasher', 'Status') }}"
+      
+      vzug_dishwasher_program_end:
+        unique_id: "vzug_dishwasher_program_end"
+        friendly_name: "V-ZUG Dishwasher Program End"
+        value_template: "{{ state_attr('sensor.vzug_dishwasher', 'ProgramEnd') }}"
+      
+      vzug_dishwasher_end:
+        unique_id: "vzug_dishwasher_end"
+        friendly_name: "V-ZUG Dishwasher End"
+        value_template: "{{ state_attr('sensor.vzug_dishwasher', 'End') }}"
+      
+      vzug_dishwasher_end_type:
+        unique_id: "vzug_dishwasher_end_type"
+        friendly_name: "V-ZUG Dishwasher End Type"
+        value_template: "{{ state_attr('sensor.vzug_dishwasher', 'EndType') }}"
+      
+      vzug_dishwasher_device_uuid:
+        unique_id: "vzug_dishwasher_device_uuid"
+        friendly_name: "V-ZUG Dishwasher Device UUID"
+        value_template: "{{ state_attr('sensor.vzug_dishwasher', 'deviceUuid') }}"
+
+      vzug_oven_device_name:
+        unique_id: "vzug_oven_device_name"
+        friendly_name: "V-ZUG Oven Device Name"
+        value_template: "{{ state_attr('sensor.vzug_oven', 'DeviceName') }}"
+
+      vzug_oven_serial:
+        unique_id: "vzug_oven_serial"
+        friendly_name: "V-ZUG Oven Serial"
+        value_template: "{{ state_attr('sensor.vzug_oven', 'Serial') }}"
+
+      vzug_oven_inactive:
+        unique_id: "vzug_oven_inactive"
+        friendly_name: "V-ZUG Oven Inactive"
+        value_template: "{{ state_attr('sensor.vzug_oven', 'Inactive') }}"
+
+      vzug_oven_program:
+        unique_id: "vzug_oven_program"
+        friendly_name: "V-ZUG Oven Program"
+        value_template: "{{ state_attr('sensor.vzug_oven', 'Program') }}"
+
+      vzug_oven_status:
+        unique_id: "vzug_oven_status"
+        friendly_name: "V-ZUG Oven Status"
+        value_template: "{{ state_attr('sensor.vzug_oven', 'Status') }}"
+
+      vzug_oven_program_end:
+        unique_id: "vzug_oven_program_end"
+        friendly_name: "V-ZUG Oven Program End"
+        value_template: "{{ state_attr('sensor.vzug_oven', 'ProgramEnd') }}"
+
+      vzug_oven_end:
+        unique_id: "vzug_oven_end"
+        friendly_name: "V-ZUG Oven End"
+        value_template: "{{ state_attr('sensor.vzug_oven', 'End') }}"
+
+      vzug_oven_end_type:
+        unique_id: "vzug_oven_end_type"
+        friendly_name: "V-ZUG Oven End Type"
+        value_template: "{{ state_attr('sensor.vzug_oven', 'EndType') }}"
+
+      vzug_oven_device_uuid:
+        unique_id: "vzug_oven_device_uuid"
+        friendly_name: "V-ZUG Oven Device UUID"
+        value_template: "{{ state_attr('sensor.vzug_oven', 'deviceUuid') }}"
