@@ -1,9 +1,0 @@
-{
-    "domain": "vzug",
-    "name": "V-ZUG Integration",
-    "version": "1.0.0",
-    "documentation": "https://github.com/jakal1989/Home_assistant/tree/main/Vzug",
-    "requirements": [],
-    "dependencies": [],
-    "codeowners": ["@jakal1989"]
-  }
