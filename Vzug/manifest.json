@@ -2,8 +2,8 @@
     "domain": "vzug",
     "name": "V-ZUG Integration",
     "version": "1.0.0",
-    "documentation": "https://github.com/dein-benutzername/vzug",
+    "documentation": "https://github.com/jakal1989/Home_assistant/tree/main/Vzug",
     "requirements": [],
     "dependencies": [],
-    "codeowners": ["@dein-benutzername"]
+    "codeowners": ["@jakal1989"]
   }
