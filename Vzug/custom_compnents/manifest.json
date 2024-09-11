@@ -1,0 +1,9 @@
+{
+    "domain": "vzug",
+    "name": "V-ZUG Integration",
+    "version": "1.0.0",
+    "documentation": "https://github.com/dein-benutzername/vzug",
+    "requirements": [],
+    "dependencies": [],
+    "codeowners": ["@dein-benutzername"]
+  }
