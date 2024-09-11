@@ -1,0 +1,5 @@
+{
+  "name": "V-ZUG Integration",
+  "content_in_root": false,
+  "domains": ["vzug"]
+}
