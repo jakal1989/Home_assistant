@@ -1,5 +1,5 @@
 ###To use this template the Steam Integrations has to be installed add this to your configuration.
-### I am using this to set a Speedlimit for my Jdownloader i case i play a game
+### I am using this to set a Speedlimit for my Jdownloader in case i play a game.
 template:
   - sensor:
       - name: "Steam game is Running"
