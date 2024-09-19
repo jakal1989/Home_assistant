@@ -1,0 +1,16 @@
+template:
+  - sensor:
+      - name: "Steam Spiel läuft"
+        unique_id: "Steam_game_runnig"
+        state: >
+          {% if state_attr('sensor.steam_STEAMID', 'game') %}
+            on
+          {% else %}
+            off
+          {% endif %}
+        icon: >
+          {% if state_attr('sensor.steam_STEAMID', 'game') %}
+            mdi:gamepad-variant
+          {% else %}
+            mdi:gamepad-variant-off
+          {% endif %}
