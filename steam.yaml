@@ -1,6 +1,7 @@
+#To use this template the Steam Integrations has to be installed add this to your configuration.
 template:
   - sensor:
-      - name: "Steam Spiel läuft"
+      - name: "Steam game is Running"
         unique_id: "Steam_game_runnig"
         state: >
           {% if state_attr('sensor.steam_STEAMID', 'game') %}
