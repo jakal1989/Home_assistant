@@ -124,3 +124,10 @@ sensor:
         unique_id: "vzug_oven_device_uuid"
         friendly_name: "V-ZUG Oven Device UUID"
         value_template: "{{ state_attr('sensor.vzug_oven', 'deviceUuid') }}"
+
+rest_command:        
+  turn_off_vzug_oven:
+  url: "http://192.168.1.175/hh?command=setProgram&value=%7B%22status%22%3A%22idle%22%7D"
+  method: post
+  headers:
+    Content-Type: "application/json"
