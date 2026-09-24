@@ -1,0 +1,13 @@
+command_line:
+  - sensor:
+      name: "BLS Nachtarbeiten"
+      unique_id: bls_nacht_info
+      # Wir rufen das Python-Skript direkt auf
+      command: "python3 /config/scripts/bls_scrape.py"
+      # Alle 60 Minuten (3600 Sek)
+      scan_interval: 3600
+      # Wir nehmen den Status aus dem JSON-Output
+      value_template: "{{ value_json.status }}"
+      # Die Details packen wir in die Attribute
+      json_attributes:
+        - details
