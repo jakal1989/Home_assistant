@@ -1,0 +1,56 @@
+rest_command:
+  buro_shelly_restart:
+    url: "http://192.168.1.101/rpc/Shelly.Reboot"
+    method: POST
+    content_type: "application/json"
+    payload: "{}"
+  schlafzimmer_shelly_restart:
+    url: "http://192.168.1.119/rpc/Shelly.Reboot"
+    method: POST
+    content_type: "application/json"
+    payload: "{}"
+  wohnzimmer_shelly_restart:
+    url: "http://192.168.1.105/rpc/Shelly.Reboot"
+    method: POST
+    content_type: "application/json"
+    payload: "{}"
+  badezimmer_spiegel_shelly_restart:
+    url: "http://192.168.1.109/rpc/Shelly.Reboot"
+    method: POST
+    content_type: "application/json"
+    payload: "{}"
+  kuche_decke_shelly_restart:
+    url: "http://192.168.1.108/rpc/Shelly.Reboot"
+    method: POST
+    content_type: "application/json"
+    payload: "{}"
+  kuche_unterboden_shelly_restart:
+    url: "http://192.168.1.111/rpc/Shelly.Reboot"
+    method: POST
+    content_type: "application/json"
+    payload: "{}"
+  eingang_shelly_restart:
+    url: "http://192.168.1.120/rpc/Shelly.Reboot"
+    method: POST
+    content_type: "application/json"
+    payload: "{}"
+  esszimmer_shelly_restart:
+    url: "http://192.168.1.110/rpc/Shelly.Reboot"
+    method: POST
+    content_type: "application/json"
+    payload: "{}"
+  sonnenstore_shelly_restart:
+    url: "http://192.168.1.112/rpc/Shelly.Reboot"
+    method: POST
+    content_type: "application/json"
+    payload: "{}"
+  store_buro_shelly_restart:
+    url: "http://192.168.1.106/rpc/Shelly.Reboot"
+    method: POST
+    content_type: "application/json"
+    payload: "{}"
+  store_schlafzimmer_shelly_restart:
+    url: "http://192.168.1.118/rpc/Shelly.Reboot"
+    method: POST
+    content_type: "application/json"
+    payload: "{}"
