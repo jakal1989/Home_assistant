@@ -7,18 +7,24 @@ rest_command:
       Authorization: !secret switchbot_api
     payload: '{"command": "{{ command }}"}'
 
-switch:
-  - platform: template
-    switches:
-      button_computer:
-        friendly_name: Computer
+template:
+  - switch:
+      - unique_id: button_computer
+        name: "Computer"
+        #sets the  state for the switch according to the ping state (Ping (ICMP)) of a PC i have two states because i have a dualboot system with different IPs
+        state: >
+          {{
+            is_state('binary_sensor.192_168_1_133', 'on')
+            or
+            is_state('binary_sensor.192_168_1_159', 'on')
+          }}
         turn_on:
-          service: rest_command.switchbot_device_command
-          data:
-            deviceId: !secret switchbot_deviceId
-            command: "turnOn"
+          - action: rest_command.switchbot_device_command
+            data:
+              deviceId: XXXXXXXXX
+              command: turnOn
         turn_off:
-          service: rest_command.switchbot_device_command
-          data:
-            deviceId: !secret switchbot_deviceId
-            command: "turnOff"
+          - action: rest_command.switchbot_device_command
+            data:
+              deviceId: XXXXXXXXX
+              command: turnOff
