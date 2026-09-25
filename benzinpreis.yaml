@@ -1,0 +1,17 @@
+sensor:
+    - platform: rest
+    name: "Benzinpreis SP95"
+    unique_id: "benzinpreis_rudi"
+    resource: "https://europe-west6-tcs-digitalbackend.cloudfunctions.net/benzinGetStationById"
+    method: POST
+    headers:
+      Content-Type: application/json
+      Accept: "*/*"
+      Origin: "https://benzin.tcs.ch"
+      Referer: "https://benzin.tcs.ch/"
+    payload: '{"id":"zcX0s6F2Y0YghIWplLtw"}'
+    value_template: "{{ value_json.fuelCollection.SP95.displayPrice }}"
+    unit_of_measurement: "CHF/l"
+    device_class: monetary
+    state_class: measurement
+    scan_interval: 3600
